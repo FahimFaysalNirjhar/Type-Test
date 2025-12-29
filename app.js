@@ -11,6 +11,20 @@ const wordCounter = () => {
   return Count;
 };
 
+const comparewords = (speed) => {
+  let words1 = para.innerText.split(/[\s.,!?;:]+/);
+  let words2 = textArea.value.trim().split(/[\s.,!?;:]+/);
+  let count = 0;
+  words1.forEach((item, idx) => {
+    if (item === words2[idx]) {
+      count++;
+    }
+  });
+  let error = words1.length - count;
+  para.innerText = `Your typing speed is ${speed} words per minute. You typed ${count} correct words out of ${words1.length}, and made ${error} mistakes.`;
+  textArea.value = "";
+};
+
 btn.addEventListener("click", () => {
   if (btn.innerText === "Start") {
     fetch(URL)
@@ -37,5 +51,8 @@ btn.addEventListener("click", () => {
     let totalTime = (endTime - startTime) / 1000;
     console.log(totalTime);
     let wordCount = wordCounter();
+    let speed = Math.round((wordCount / totalTime) * 60);
+    console.log(speed);
+    comparewords(speed);
   }
 });
