@@ -66,3 +66,12 @@ https://meowfacts.herokuapp.com/?count=3
 ## 📄 License
 
 This project is open-source and free to use for learning and personal projects.
+
+---
+
+## 👤 Author
+
+**Fahim Faysal – Front-End Developer**
+
+- GitHub: [https://github.com/FahimFaysalNirjhar](https://github.com/FahimFaysalNirjhar)
+- Email: [fahimfaysal1995@gmail.com](mailto:fahimfaysal1995@gmail.com)
